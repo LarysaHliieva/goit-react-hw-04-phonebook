@@ -48,7 +48,7 @@ export const App = () => {
     setContacts(prevContacts => prevContacts.filter(item => item.id !== id));
   };
 
-  const hangleFilter = e => {
+  const handleFilter = e => {
     const { value } = e.target;
     setFilter(value);
   };
@@ -75,7 +75,7 @@ export const App = () => {
       <ContactForm onSubmit={addContact} />
 
       <h2>Contacts</h2>
-      <Filter hangleFilter={hangleFilter} />
+      <Filter handleFilter={handleFilter} />
       <ContactList items={filteredContacts} onDelete={deleteContact} />
     </div>
   );
